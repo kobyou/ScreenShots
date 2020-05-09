@@ -143,9 +143,12 @@
     <Image Include="res\Circle.png" />
     <Image Include="res\Exit.png" />
     <Image Include="res\Finish.png" />
+    <Image Include="res\icon1.ico" />
     <Image Include="res\Mosaic.png" />
     <Image Include="res\Rectangle.png" />
     <Image Include="res\Save.png" />
+    <Image Include="res\SaveAll.png" />
+    <Image Include="res\save_all.png" />
     <Image Include="res\Screenshot.ico" />
     <Image Include="res\Text.png" />
     <Image Include="res\toolbar1.bmp" />

@@ -339,7 +339,7 @@ BOOL CCatchScreenDlg::OnSetCursor(CWnd* pWnd, UINT nHitTest, UINT message)
 	return TRUE;
 }
 
-void swap(int &a, int &b)
+static void swap(int &a, int &b)
 {
 	int temp;
 	temp = a;
@@ -748,7 +748,12 @@ BOOL CCatchScreenDlg::OnCommand(WPARAM wParam, LPARAM lParam)
 		int wmId  = LOWORD(wParam);
 		switch(wmId) {
 			case MyToolBar_ID:
-				AfxMessageBox(_T("矩形"));
+				if(true) {
+					//AfxMessageBox(_T("矩形"));
+					CRect rect(0, 0, m_xScreen, m_yScreen);
+					CopyScreenToBitmap(&rect, TRUE);
+				}
+				PostQuitMessage(0);
 				break;
 			case MyToolBar_ID+1:
 				AfxMessageBox(_T("圆形"));
@@ -763,7 +768,17 @@ BOOL CCatchScreenDlg::OnCommand(WPARAM wParam, LPARAM lParam)
 				AfxMessageBox(_T("文字"));
 				break;
 			case MyToolBar_ID +5:
-				AfxMessageBox(_T("撤销"));
+				//AfxMessageBox(_T("撤销"));
+				m_bLBtnDown = FALSE;
+				if(m_bFirstDraw) {
+					//如果已经截取矩则清除截取矩形
+					m_bFirstDraw = FALSE;
+					//清除矩形大小
+					m_rectTracker.m_rect.SetRect(-1, -1, -1, -1);
+					UpdateTipString();
+					SetEidtWndText();
+					InvalidateRgnWindow();
+				}
 				break;
 			case MyToolBar_ID +6:
 				CopyScreenToBitmap(m_rectTracker.m_rect, TRUE);
@@ -786,7 +801,7 @@ BOOL CCatchScreenDlg::OnCommand(WPARAM wParam, LPARAM lParam)
 		return CDialog::OnCommand(wParam, lParam);
 	}
 	else {
-		return true;
+		return TRUE;
 	}
 }
 

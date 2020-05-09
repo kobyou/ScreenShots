@@ -89,7 +89,7 @@ BOOL CMyToolBar::CreateToolBar(HWND hWndParent)
 
 		ZeroMemory(&tbbutton, sizeof(TBBUTTON));
 		//tbbutton.iString   = (INT_PTR) tooltips[i];
-		tbbutton.fsStyle   = TBSTYLE_CHECKGROUP; // 单选属性
+		tbbutton.fsStyle = TBSTYLE_BUTTON;// TBSTYLE_CHECKGROUP; // 单选属性 Koby.Ou_20200509 modify style to button
 		tbbutton.fsState   = TBSTATE_ENABLED | wrapnow;
 		tbbutton.idCommand = MyToolBar_ID + i; // 定义控件的id
 		tbbutton.iBitmap   = i;
