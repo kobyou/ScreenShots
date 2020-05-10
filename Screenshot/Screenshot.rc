@@ -16,7 +16,7 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// 中文(简体，中国) resources
+// Chinese (Simplified, PRC) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
 LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
@@ -76,13 +76,13 @@ IDR_MAINFRAME           ICON                    "res\\Screenshot.ico"
 // Dialog
 //
 
-IDD_SCREENSHOT_DIALOG DIALOGEX 0, 0, 85, 27
+IDD_SCREENSHOT_DIALOG DIALOGEX 0, 0, 85, 23
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 EXSTYLE WS_EX_APPWINDOW
 CAPTION "Screenshot"
 FONT 9, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
-    PUSHBUTTON      "开始截图",IDC_BTN_START,3,3,79,21
+    PUSHBUTTON      "开始截图",IDC_BTN_START,2,2,81,19
 END
 
 IDD_DIALOGFORIMG DIALOGEX 0, 0, 169, 140
@@ -143,10 +143,10 @@ GUIDELINES DESIGNINFO
 BEGIN
     IDD_SCREENSHOT_DIALOG, DIALOG
     BEGIN
-        LEFTMARGIN, 3
-        RIGHTMARGIN, 82
-        TOPMARGIN, 3
-        BOTTOMMARGIN, 24
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 83
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 21
     END
 
     IDD_DIALOGFORIMG, DIALOG
@@ -193,6 +193,8 @@ IDB_EXIT                PNG                     "res\\Exit.png"
 
 IDB_FINISH              PNG                     "res\\Finish.png"
 
+IDB_SCRALL              PNG                     "res\\ScrAll.png"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -212,7 +214,7 @@ BEGIN
     0
 END
 
-#endif    // 中文(简体，中国) resources
+#endif    // Chinese (Simplified, PRC) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

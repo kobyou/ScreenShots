@@ -7,6 +7,7 @@
 
 #include "CatchScreenDlg.h"
 
+#define WIN_TITLE "ScrShotV1.1"
 
 #ifdef _DEBUG
 //#define new DEBUG_NEW
@@ -49,7 +50,7 @@ BOOL CScreenshotDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);		// 设置小图标
 
 	// TODO: 在此添加额外的初始化代码
-
+	SetWindowText(WIN_TITLE);
 	// 使窗体在最顶层
 	::SetWindowPos(GetSafeHwnd(), HWND_TOPMOST, 150, 150, 0, 0,
 	               SWP_NOMOVE | SWP_NOSIZE | SWP_NOREDRAW);

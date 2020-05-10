@@ -91,7 +91,7 @@ BOOL CCatchScreenDlg::OnInitDialog()
 
 	m_toolBar.CreateToolBar(m_hWnd);
 	m_toolBar.RemoveChildStyle();
-	::MoveWindow(m_toolBar.GetHWND(), 300, 300, 230, 30, FALSE);
+	::MoveWindow(m_toolBar.GetHWND(), 300, 300, 250, 30, FALSE);
 
 
 	UpdateTipString();
@@ -748,12 +748,7 @@ BOOL CCatchScreenDlg::OnCommand(WPARAM wParam, LPARAM lParam)
 		int wmId  = LOWORD(wParam);
 		switch(wmId) {
 			case MyToolBar_ID:
-				if(true) {
-					//AfxMessageBox(_T("矩形"));
-					CRect rect(0, 0, m_xScreen, m_yScreen);
-					CopyScreenToBitmap(&rect, TRUE);
-				}
-				PostQuitMessage(0);
+				AfxMessageBox(_T("矩形"));
 				break;
 			case MyToolBar_ID+1:
 				AfxMessageBox(_T("圆形"));
@@ -789,6 +784,13 @@ BOOL CCatchScreenDlg::OnCommand(WPARAM wParam, LPARAM lParam)
 				break;
 			case MyToolBar_ID +8:
 				CopyScreenToBitmap(m_rectTracker.m_rect, TRUE);
+				PostQuitMessage(0);
+				break;
+			case MyToolBar_ID + 9://截取全屏
+				if(true) {
+					CRect rect(0, 0, m_xScreen, m_yScreen);
+					CopyScreenToBitmap(&rect, TRUE);
+				}
 				PostQuitMessage(0);
 				break;
 			default:

@@ -115,13 +115,10 @@
     <Image Include="res\Undo.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="res\SaveAll.png">
-      <Filter>Resource Files</Filter>
-    </Image>
     <Image Include="res\icon1.ico">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="res\save_all.png">
+    <Image Include="res\ScrAll.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
